@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.header {
+    width: 100%;
+    /* height: 100vh; */
+    background: #020200;
+    background-size: cover;
+    background-position: center;
+}
+
+.header .logo {
+    color: white;
+}
+
+nav {
+    .contact-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar is above other elements */
+}
+
+.contact-header {
+    padding-top: 100px; /* Adjust padding to make space for the fixed navbar */
+}
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
+    background-color: #333; /* Navbar background color */
+}
+
+nav ul {
+    flex: 1;
+    text-align: right;
+    padding-right: 40px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 10px 25px;
+}
+
+nav ul li a {
+    color: white; /* Navbar text color */
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+nav ul li a:hover {
+    color: #f9004d;
+    transition: 0.4s;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(100vh - 90px); /* Adjusting for the nav height */
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.text-content {
+    color: white;
+}
+
+.text-content h1 {
+    margin: 20px 0px;
+    font-size: 75px;
+}
+
+.text-content h3 {
+    margin: 25px 0;
+    font-size: 30px;
+}
+
+.text-content h4 {
+    color: #fcf;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.text-content a {
+    display: inline-block;
+    margin: 10px 10px 10px 0;
+    padding: 10px 20px;
+    background: #f9004d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.text-content a.btn {
+    background: #f9004d;
+    color: #020200;
+    font-weight: 400;
+}
+
+.image-content img, .round-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* Makes the image round */
+}
+
+.about {
+    width: 100%;
+    padding: 100px 0px;
+    background-color: #191919;
+}
+
+
+.about img {
+    height: 450px;
+    width: 400px;
+}
+
+.about text {
+    width: 550px;
+}
+
+.main {
+    width: 1130px;
+    max-width: 95%;
+    display: flex;
+    align-items: center;
+}
+
+.about-text h2 {
+    color: white;
+    font-size: 65px;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    margin-left: 45px;
+}
+
+.about-text p {
+    color: #fcfc;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+    margin-left: 35px;
+}
+
+button {
+    background-color: #f9004d;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: -4s;
+    margin-left: 35px;
+}
+
+button:hover {
+    background-color: transparent;
+    border: 2px solid #f9004d;
+    cursor: pointer;  
+}
+
+#skills {
+    background-color: #020200;
+    padding: 80px 0;
+    color: #fff;
+}
+
+.info h1 {
+    text-align: center;
+}
+
+.header.skill-header {
+    height: 200px; /* Set the desired height for the header on the skill page */
+}
+
+.skills {
+    width: 100%;
+    background-color: #020200;
+    padding: 50px 50px;
+    letter-spacing: normal;
+    color: #fff;
+}
+
+
+
+
+.skill-name {
+    font-size: 18px;
+    font-weight: 200;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.skills h1 {
+    color: white;
+    font-size: 65px;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    margin-left: 45px; /* Adjust the font size as needed */
+}
+
+.skill-bar {
+    height: 14px;
+    background: #020200;
+    border-radius: 3px;
+}
+
+.skill-per {
+    height: 14px;
+    background: rgb(255,0,0);
+    border-radius: 3px;
+    position: relative;
+}
+
+.skill-per::before {
+    position: absolute;
+    padding: 4px 6px;
+    background: #fff;
+    border-radius: 2px;
+    font-size: 12px;
+    top: -35px;
+    right: 0;
+    transform: translate(20%);
+}
+
+.skill-per::after {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 2px;
+    font-size: 12px;
+    top: -20px;
+    right: 0;
+    transform: translate(50%) rotate(45deg);
+}
+
+@keyframes fillBars {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.header.skill-header {
+    height: 200px; /* Set the desired height for the header on the skill page */
+}
+
+
+
+/* Additional styles for the contact page */
+.contact-header {
+    background: #020200; /* Same background color as the header */
+    padding: 80px 0; /* Adjust padding to position the form correctly */
+    height: auto; /* Allow the header to grow with the content */
+}
+
+.contact-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar is above other elements */
+}
+
+.contact-header {
+    padding-top: 100px; /* Adjust padding to make space for the fixed navbar */
+}
+
+
+.contact-section {
+    padding: 50px 8%; /* Add padding for better spacing */
+    color: white; /* White text color */
+}
+
+.contact-section h1 {
+    color: #fff; /* White color for the heading */
+    font-size: 50px; /* Adjust font size as needed */
+    margin-bottom: 30px; /* Spacing below the heading */
+}
+
+.contact-form {
+    background-color: #333; /* Background color for the form */
+    padding: 30px; /* Padding inside the form */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.contact-form .form-label {
+    color: #fff; /* White color for the form labels */
+    margin-bottom: 10px; /* Spacing below the labels */
+    display: block; /* Ensure labels are block elements */
+}
+
+.contact-form .form-control {
+    background-color: #191919; /* Dark background for input fields */
+    border: 1px solid #555; /* Border color for input fields */
+    color: #fff; /* White text color */
+    padding: 10px; /* Padding inside input fields */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.contact-form .form-control:focus {
+    background-color: #2c2c2c; /* Slightly lighter background on focus */
+    border-color: #f9004d; /* Border color on focus */
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 10px rgba(249, 0, 77, 0.5); /* Add subtle box shadow on focus */
+}
+
+.contact-form button.btn {
+    background: #f9004d; /* Background color for the button */
+    color: #fff; /* White text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.contact-form button.btn:hover {
+    background: #c7003a; /* Darker background on hover */
+}
+
+
+
+
+span {
+    color: #f9004d;
+}
